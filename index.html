@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be1b1b95c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <?php include('config.php') ?>
+    <!--HOME PAGE START-->
+    <section id="home">
+        <nav>
+            <span id="banner">
+                <img src="Guruvar_Saree (1).png" alt="">
+            </span>
+            <span id="links">
+                <a href="#home">home</a>
+                <a href="#products">products</a>
+                <a href="#contact">contact us</a>
+            </span>
+        </nav>
+        <div id="slideshow">
+            <span class="slide1 slide">
+                <span>
+                    <h1>UNLEASHING</h1>
+                    <h2>COLORS</h2>
+                    <h1>BY GURUVAR</h1>
+                </span>
+            </span>
+            
+            <span class="slide2 slide">
+                <span>
+                    <h1>FINEST</h1>
+                    <h1>COLLECTION OF</h1>
+                    <h2>SAREES</h2>
+                </span>
+                <img src="slideshow/1006A.jpg" alt="">
+            </span>
+
+            <span class="slide3 slide">
+                <img src="slideshow/1002-min.jpg" alt="">
+                <span>
+                    <h1>MAKE YOUR</h1>
+                    <h2>DAY BLESSED</h2>
+                    <h1>WITH GURUVAR</h1>
+                </span>
+            </span>
+
+            <span class="slide4 slide">
+                <span>
+                    <h1>ADD A COLOR</h1>
+                    <h1>TO YOUR</h1>
+                    <h2>BEAUTY</h2>
+                </span>
+                <img src="slideshow/1008A.jpg" alt="">
+            </span>
+            
+            <span class="slide5 slide">
+                <img src="slideshow/4006A.jpg" alt="">
+                <span>
+                    <h1>TAKE A</h1>
+                    <h2>BIT DARKER</h2>
+                    <h1>SHADE</h1>
+                </span>
+            </span>
+
+            <span class="slide6 slide">
+                <span>
+                    <h1>TOUCH OF</h1>
+                    <h2>CULTURE IN</h2>
+                    <h1>WARDROBE</h1>
+                </span>
+                <img src="slideshow/1004A.jpg" alt="">
+            </span>
+            
+            <span class="slide7 slide">
+                <span>
+                    <h1>TAKE A STEP</h1>
+                    <h1>AHEAD IN BEAUTY WITH</h1>
+                    <h2>GURUVAR</h2>
+                </span>
+                <img src="slideshow/1002B.jpg" alt="">
+            </span>
+            <span class="counter">
+                <span class="counterPin1 counterPin chPin" onclick="slideMove(1)"></span>
+                <span class="counterPin2 counterPin" onclick="slideMove(2)"></span>
+                <span class="counterPin3 counterPin" onclick="slideMove(3)"></span>
+                <span class="counterPin4 counterPin" onclick="slideMove(4)"></span>
+                <span class="counterPin5 counterPin" onclick="slideMove(5)"></span>
+                <span class="counterPin6 counterPin" onclick="slideMove(6)"></span>
+                <span class="counterPin7 counterPin" onclick="slideMove(7)"></span>
+            </span>
+        </div>
+    </section>
+    <!--HOME PAGE END-->
+
+
+    <!--PRODUCTS PAGE START-->
+    <section id="products">
+        <div id="brandBar">
+            <span class="left">
+                <i class="fa-solid fa-chevron-left" onclick="moveLeft()"></i>
+            </span>
+            <div id="containerBrands">
+            <!--<?php
+                $queryBrands = "SELECT * from brandSaree";
+                $resultBrands = mysqli_query($conn, $queryBrands);
+                while($row = mysqli_fetch_assoc($resultBrands)){ ?>
+                    <span class="brand brand<?php echo $row['no']; ?>" onclick="scrollControl(this.classList[1])">
+                            <i class="fa-solid fa-bookmark"></i>
+                            <h4><?php echo $row['name'] ?></h4>
+                    </span>
+            <?php } ?>-->
+            </div>
+            <span class="right">
+                <i class="fa-solid fa-chevron-right" onclick="moveRight()"></i>
+            </span>
+        </div>
+        <!--<?php
+            $resultBrands = mysqli_query($conn, $queryBrands);
+            while($row = mysqli_fetch_assoc($resultBrands)){ ?>
+                <div id="<?php echo $row['name'] ?>" class="section section<?php echo $row['no']; ?>">
+                    <h3><?php echo $row['name'] ?></h3>
+                    <div class="collection">
+                        <?php
+                            for($i=1;$i<=8;$i++){
+                                ?>
+                                    <img src="<?php echo $row['name']."/100".$i."-min.jpg"; ?>" alt="">
+                                <?php
+                            }
+                        ?>
+                    </div>
+                </div>
+            <?php } ?>-->
+    </section>
+    <section id="contact">
+        <img id="fullLogo" src="Guruvar_Saree (1).png" alt="">
+        <div>
+            <span>
+                <i class="fa-solid fa-phone"></i><a href="tel:91 9723677877"><p>+91 9723677877</p></a>
+            </span>
+            <span>
+                <i class="fa-solid fa-at"></i><a href="mailto:guruvarsarees@gmail.com"><p>guruvarsarees@gmail.com</p></a>
+            </span>
+            <span>
+                <i class="fa-solid fa-location-dot"></i><a href="https://goo.gl/maps/bJSyJfN3ZmVsnHjr8"><p>33-34, Millenium Textile Market-4,<br>Bhathena<br>Surat</p></a>
+            </span>
+        </div>
+        
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
